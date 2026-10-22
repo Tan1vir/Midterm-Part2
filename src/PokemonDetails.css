@@ -1,0 +1,59 @@
+
+.details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4934a5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.details-card {
+  padding: 30px;
+  border-radius: 20px;
+  background: #f2f0ff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.details-image {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+}
+
+.details-card h1 {
+  text-transform: capitalize;
+  color: #30236f;
+  font-size: 2rem;
+}
+
+.details-info p {
+  margin: 12px 0;
+}
+
+.abilities-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ability {
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: #4934a5;
+  color: white;
+  text-transform: capitalize;
+}
+
+.details-status,
+.details-error {
+  text-align: center;
+  margin: 40px 0;
+}

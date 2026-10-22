@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
+import PokemonDetails from "./PokemonDetails";
+
 import './App.css'
 
 function App() {
@@ -9,7 +11,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      
+      <Route
+        path="/pokemon/:name"
+        element={<PokemonDetails />}
+      />
     </Routes>
   );
 }

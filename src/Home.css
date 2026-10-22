@@ -17,11 +17,10 @@
 }
 
 .pokemon-card {
-  background-color: #f2f0ff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .pokemon-card:hover {
