@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import "./Home.css";
 
 function Home() {
   const [pokemon, setPokemon] = useState([]);
@@ -55,27 +56,36 @@ function Home() {
       <h1>Pokémon Explorer</h1>
       <p>Discover Pokémon and learn about their abilities.</p>
 
-      <div className="pokemon-grid">
-        {pokemon.map((item) => (
-          <article className="pokemon-card" key={item.id}>
-            <img
-              src={item.sprites.front_default}
-              alt={item.name}
-            />
+      
+<div className="pokemon-grid">
+  {pokemon.map((item) => (
+    <article className="pokemon-card" key={item.id}>
+      <img
+        src={
+          item.sprites.other["official-artwork"].front_default ||
+          item.sprites.front_default
+        }
+        alt={item.name}
+      />
 
-            <h2>
-              {item.name.charAt(0).toUpperCase() +
-                item.name.slice(1)}
-            </h2>
+      <h2>
+        {item.name.charAt(0).toUpperCase() +
+          item.name.slice(1)}
+      </h2>
 
-            <p>
-              Type: {item.types
-                .map((type) => type.type.name)
-                .join(", ")}
-            </p>
-          </article>
-        ))}
-      </div>
+      <p>
+        Type:{" "}
+        {item.types
+          .map((type) => type.type.name)
+          .join(", ")}
+      </p>
+
+      <p>Height: {item.height / 10} m</p>
+      <p>Weight: {item.weight / 10} kg</p>
+    </article>
+  ))}
+</div>
+
     </main>
   );
 }
