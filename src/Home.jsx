@@ -67,9 +67,12 @@ function Home() {
   key={item.id}
 >
   <img
-    src={item.sprites.front_default}
-    alt={item.name}
-  />
+  src={
+    item.sprites.other["official-artwork"].front_default ||
+    item.sprites.front_default
+  }
+  alt={item.name}
+/>
 
   <h2>
     {item.name.charAt(0).toUpperCase() +
